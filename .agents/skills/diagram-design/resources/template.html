@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial System Architecture</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --card-hover: #374151;
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --accent-blue: #38bdf8;
+      --accent-green: #34d399;
+      --accent-purple: #c084fc;
+      --accent-amber: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      padding: 48px 24px;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .diagram-container {
+      width: 100%;
+      max-width: 960px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .header p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .node {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s;
+    }
+    .node:hover {
+      border-color: var(--card-hover);
+    }
+    .badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 6px;
+      border-radius: 4px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+    .node h3 {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .node p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .connector-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="diagram-container">
+    <div class="header">
+      <span class="badge">Architecture Flow</span>
+      <h1 style="margin-top: 8px;">Multi-Agent Orchestration & Memory Pipeline</h1>
+      <p>Clean editorial layout with structured tiers, typed interfaces, and deterministic state transitions.</p>
+    </div>
+
+    <!-- Tier 1: Ingestion & Perception -->
+    <div class="grid">
+      <div class="node">
+        <span class="badge">Perception</span>
+        <h3>Browser Use</h3>
+        <p>Headless web automation, DOM navigation, and dynamic interaction capture.</p>
+      </div>
+      <div class="node">
+        <span class="badge" style="color: var(--accent-purple); border-color: rgba(192, 132, 252, 0.3); background: rgba(192, 132, 252, 0.1);">Context</span>
+        <h3>OpenViking Context</h3>
+        <p>Virtual filesystem hierarchy (L0/L1/L2) preventing token bloat.</p>
+      </div>
+      <div class="node">
+        <span class="badge" style="color: var(--accent-green); border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.1);">Memory</span>
+        <h3>Agent Memory</h3>
+        <p>Persistent knowledge store retaining cross-session decisions and gotchas.</p>
+      </div>
+    </div>
+
+    <!-- Flow Connector -->
+    <div class="connector-row">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+
+    <!-- Tier 2: Core Harness & Execution -->
+    <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="node">
+        <span class="badge" style="color: var(--accent-amber); border-color: rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.1);">Governance</span>
+        <h3>Harness Engineering</h3>
+        <p>Bounded execution loops, deterministic test-before-edit verification, and error budgets.</p>
+      </div>
+      <div class="node">
+        <span class="badge" style="color: #f87171; border-color: rgba(248, 113, 113, 0.3); background: rgba(248, 113, 113, 0.1);">Security</span>
+        <h3>Cybersecurity Audit</h3>
+        <p>STRIDE threat modeling, dependency inspection, and vulnerability triage.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

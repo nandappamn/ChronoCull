@@ -1,0 +1,22 @@
+{
+  "name": "freellm-gateway",
+  "version": "1.0.0",
+  "description": "Modular AI Gateway with Multi-Key Pooling, High-Yield Free Providers, and Stacked RTK + Caveman Compression",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "llm",
+    "gateway",
+    "freellmapi",
+    "prompt-compression",
+    "rtk",
+    "caveman",
+    "key-pool"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,104 @@
+{
+  "providers": {
+    "mistral": {
+      "name": "Mistral AI",
+      "baseUrl": "https://api.mistral.ai/v1",
+      "tier": 1,
+      "freeQuotaMonthly": "1,000,000,000 tokens",
+      "defaultModel": "mistral-small-latest",
+      "models": [
+        "mistral-small-latest",
+        "codestral-latest",
+        "open-mistral-nemo"
+      ]
+    },
+    "llm7": {
+      "name": "LLM7",
+      "baseUrl": "https://api.llm7.io/v1",
+      "tier": 1,
+      "freeQuotaMonthly": "150,000,000 tokens",
+      "defaultModel": "llm7-free",
+      "models": [
+        "llm7-free"
+      ]
+    },
+    "groq": {
+      "name": "Groq",
+      "baseUrl": "https://api.groq.com/openai/v1",
+      "tier": 1,
+      "freeQuotaMonthly": "117,000,000 tokens",
+      "defaultModel": "llama-3.3-70b-versatile",
+      "models": [
+        "llama-3.3-70b-versatile",
+        "llama-3.1-8b-instant",
+        "mixtral-8x7b-32768"
+      ]
+    },
+    "gemini": {
+      "name": "Google Gemini",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
+      "tier": 1,
+      "freeQuotaMonthly": "60,000,000 tokens",
+      "defaultModel": "gemini-2.5-flash",
+      "models": [
+        "gemini-2.5-flash",
+        "gemini-3.0-flash",
+        "gemini-2.5-flash-lite"
+      ]
+    },
+    "cerebras": {
+      "name": "Cerebras",
+      "baseUrl": "https://api.cerebras.ai/v1",
+      "tier": 2,
+      "freeQuotaMonthly": "30,000,000 tokens",
+      "defaultModel": "llama3.3-70b",
+      "models": [
+        "llama3.3-70b",
+        "llama3.1-8b"
+      ]
+    },
+    "sambanova": {
+      "name": "SambaNova",
+      "baseUrl": "https://api.sambanova.ai/v1",
+      "tier": 2,
+      "freeQuotaMonthly": "30,000,000 tokens",
+      "defaultModel": "Meta-Llama-3.3-70B-Instruct",
+      "models": [
+        "Meta-Llama-3.3-70B-Instruct",
+        "Qwen2.5-Coder-32B-Instruct"
+      ]
+    },
+    "cloudflare": {
+      "name": "Cloudflare Workers AI",
+      "baseUrl": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/v1",
+      "tier": 2,
+      "freeQuotaMonthly": "30,000,000 tokens (10k Neurons/day)",
+      "defaultModel": "@cf/meta/llama-3.3-70b-instruct",
+      "models": [
+        "@cf/meta/llama-3.3-70b-instruct",
+        "@cf/meta/llama-3.1-8b-instruct"
+      ]
+    },
+    "siliconflow": {
+      "name": "SiliconFlow",
+      "baseUrl": "https://api.siliconflow.cn/v1",
+      "tier": 3,
+      "freeQuotaMonthly": "Permanently Free (Uncapped concurrency-limited)",
+      "defaultModel": "Qwen/Qwen2.5-7B-Instruct",
+      "models": [
+        "Qwen/Qwen2.5-7B-Instruct",
+        "deepseek-ai/DeepSeek-V3"
+      ]
+    },
+    "zhipu": {
+      "name": "Z.AI (Zhipu GLM)",
+      "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+      "tier": 3,
+      "freeQuotaMonthly": "Permanently Free (GLM-4-Flash uncapped)",
+      "defaultModel": "glm-4-flash",
+      "models": [
+        "glm-4-flash"
+      ]
+    }
+  }
+}

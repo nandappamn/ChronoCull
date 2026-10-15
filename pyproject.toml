@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chronocull"
+version = "0.1.0"
+description = "Autonomous media curation, sorting, and travelogue engine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "ChronoCull Contributors" }
+]
+dependencies = [
+    "Pillow>=10.0.0",
+    "rich>=13.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+]
+
+[project.optional-dependencies]
+agent = [
+    "browser-use>=0.1.0",
+    "playwright>=1.40.0",
+]
+apify = [
+    "apify-client>=1.6.0",
+]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+chronocull = "chronocull.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+chronocull = ["data/*.json.gz"]
+
